@@ -1,0 +1,13 @@
+env         = "prod"
+aws_region  = "ap-northeast-2"
+app_name    = "ticketing"
+
+db_password = "CHANGE_ME"
+
+key_name    = "your-key"
+github_repo = "your-org/your-repo"
+
+eks_cluster_name      = "ticketing-eks"
+cognito_domain_prefix = "your-cognito-domain"
+
+alb_dns_name = ""
