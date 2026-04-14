@@ -74,21 +74,3 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "assets" {
   }
 }
 
-# 공개 읽기 정책
-resource "aws_s3_bucket_policy" "assets_public_read" {
-  bucket = aws_s3_bucket.assets.id
-
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Principal = "*"
-        Action = [
-          "s3:GetObject"
-        ]
-        Resource = "${aws_s3_bucket.assets.arn}/*"
-      }
-    ]
-  })
-}
